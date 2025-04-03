@@ -1,0 +1,132 @@
+.address-page{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    box-shadow: 1 0 10p rgba(0, 0, 0, 0.1);
+}
+
+.address-page h2{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+.address-page form{
+    display: flex;
+    flex-direction: column;
+}
+.address-page label{
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.address-page input{
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 99%;
+}
+.address-page button{
+    padding: 10px 20px;
+    background-color: #f68b1e;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.address-page button:hover{
+    background-color: #8c4d0e;
+}
+
+.error-message{
+    color: red;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.address-form-container {
+    background-color: var(--background-color);
+}
+
+.address-form {
+    background-color: var(--surface-color);
+    border: 1px solid var(--text-tertiary);
+    box-shadow: var(--shadow-md);
+}
+
+.address-form h2 {
+    color: var(--text-primary);
+}
+
+.form-group label {
+    color: var(--text-primary);
+}
+
+.form-group input,
+.form-group select {
+    background-color: var(--surface-color);
+    border: 1px solid var(--text-tertiary);
+    color: var(--text-primary);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(var(--primary-color), 0.1);
+}
+
+.submit-button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+}
+
+.submit-button:hover {
+    background-color: var(--button-hover-bg);
+    box-shadow: var(--shadow-sm);
+}
+
+.error-message {
+    background-color: var(--error-color);
+    color: var(--surface-color);
+}
+
+.address-container {
+    background-color: var(--surface-color);
+    border: 1px solid var(--text-tertiary);
+}
+
+.address-container h2 {
+    color: var(--text-primary);
+}
+
+.address-form label {
+    color: var(--text-primary);
+}
+
+.address-form input {
+    background-color: var(--surface-color);
+    border: 1px solid var(--text-tertiary);
+    color: var(--text-primary);
+}
+
+.address-form input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(var(--primary-color), 0.1);
+}
+
+.address-form button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+}
+
+.address-form button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+.success-message {
+    background-color: var(--success-color);
+    color: var(--surface-color);
+}

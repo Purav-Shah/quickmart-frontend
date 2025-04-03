@@ -1,0 +1,293 @@
+.admin-orders-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--background-color);
+    min-height: calc(100vh - 64px);
+}
+
+.admin-orders-page h2 {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--surface-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 2rem;
+    border: 1px solid var(--text-tertiary);
+}
+
+.statusFilter, .searchStatus {
+    flex: 1;
+    max-width: 300px;
+    color: var(--text-primary);
+    border: 1px solid var(--text-tertiary);
+}
+
+.statusFilter label, .searchStatus label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.statusFilter select, .searchStatus select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--text-tertiary);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--text-primary);
+    background-color: var(--surface-color);
+    transition: all 0.3s ease;
+}
+
+.statusFilter select:hover, .searchStatus select:hover {
+    border-color: var(--text-secondary);
+}
+
+.statusFilter select:focus, .searchStatus select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(var(--primary-color), 0.1);
+}
+
+.orders-list {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.order-card {
+    background-color: var(--surface-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid var(--text-tertiary);
+}
+
+.order-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.order-header {
+    padding: 1rem;
+    background-color: var(--background-color);
+    cursor: pointer;
+    border-bottom: 1px solid var(--text-tertiary);
+}
+
+.order-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    align-items: center;
+}
+
+.order-summary span {
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.status {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+.status.pending {
+    background-color: var(--warning-color);
+    color: var(--surface-color);
+}
+
+.status.confirmed {
+    background-color: var(--info-color);
+    color: var(--surface-color);
+}
+
+.status.shipped {
+    background-color: var(--primary-color);
+    color: var(--surface-color);
+}
+
+.status.delivered {
+    background-color: var(--success-color);
+    color: var(--surface-color);
+}
+
+.status.cancelled {
+    background-color: var(--error-color);
+    color: var(--surface-color);
+}
+
+.status.returned {
+    background-color: var(--secondary-color);
+    color: var(--surface-color);
+}
+
+.expand-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: transform 0.2s ease;
+}
+
+.expand-btn:hover {
+    transform: scale(1.1);
+}
+
+.order-details {
+    padding: 1.5rem;
+    background-color: var(--surface-color);
+}
+
+.customer-info {
+    margin-bottom: 1rem;
+}
+
+.customer-info h4, .order-items h4 {
+    color: var(--text-primary);
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.customer-info p {
+    color: var(--text-secondary);
+    margin: 0.25rem 0;
+    font-size: 0.875rem;
+}
+
+.order-items {
+    margin-top: 1rem;
+}
+
+.order-items table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 1rem;
+    background-color: var(--surface-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.order-items th {
+    background-color: var(--background-color);
+    color: var(--text-primary);
+    font-weight: 600;
+    text-align: left;
+    padding: 1rem;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+}
+
+.order-items td {
+    padding: 1rem;
+    color: var(--text-primary);
+    border-top: 1px solid var(--text-tertiary);
+}
+
+.order-actions {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.status-select {
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--text-tertiary);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--text-primary);
+    background-color: var(--surface-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.status-select:hover {
+    border-color: var(--text-secondary);
+}
+
+.status-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(var(--primary-color), 0.1);
+}
+
+.loading {
+    text-align: center;
+    padding: 3rem;
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+}
+
+.error-message {
+    background-color: var(--error-color);
+    color: var(--surface-color);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.no-orders {
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+    background-color: var(--surface-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 768px) {
+    .admin-orders-page {
+        padding: 1rem;
+    }
+
+    .admin-orders-page h2 {
+        font-size: 2rem;
+    }
+
+    .filter-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .statusFilter,
+    .searchStatus {
+        max-width: 100%;
+    }
+
+    .order-summary {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .order-items th,
+    .order-items td {
+        padding: 0.75rem;
+        font-size: 0.875rem;
+    }
+}

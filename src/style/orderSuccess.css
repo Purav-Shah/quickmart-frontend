@@ -1,0 +1,173 @@
+.order-success-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    min-height: calc(100vh - 64px);
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    background-color: var(--success-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    color: var(--surface-color);
+    font-size: 2.5rem;
+}
+
+.order-success-page h1 {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.order-success-page p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.order-details-card {
+    background-color: var(--surface-color);
+    border-radius: 12px;
+    padding: 2rem;
+    width: 100%;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--text-tertiary);
+    margin-bottom: 2rem;
+}
+
+.order-info {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.order-info h2 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--text-tertiary);
+}
+
+.info-row:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.info-label {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.info-value {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.action-button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.primary-button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+}
+
+.primary-button:hover {
+    background-color: var(--button-hover-bg);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+.secondary-button {
+    background-color: var(--surface-color);
+    color: var(--text-primary);
+    border: 1px solid var(--text-tertiary);
+}
+
+.secondary-button:hover {
+    background-color: var(--background-color);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 768px) {
+    .order-success-page {
+        padding: 2rem 1rem;
+    }
+
+    .order-success-page h1 {
+        font-size: 2rem;
+    }
+
+    .order-details-card {
+        padding: 1.5rem;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .action-button {
+        width: 100%;
+    }
+}
+
+.success-container {
+    background-color: var(--surface-color);
+    border: 1px solid var(--text-tertiary);
+}
+
+.success-title {
+    color: var(--text-primary);
+}
+
+.success-message {
+    color: var(--text-secondary);
+}
+
+.continue-shopping-button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+}
+
+.continue-shopping-button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+.error-message {
+    background-color: var(--error-color);
+    color: var(--surface-color);
+} 

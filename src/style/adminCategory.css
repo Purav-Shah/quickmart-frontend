@@ -1,0 +1,147 @@
+.admin-category-page {
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    background-color: var(--background-color);
+}
+.admin-category-list{
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.admin-category-list h2{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.admin-category-list button{
+    background-color: #e0f2fe;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.admin-category-list button:hover{
+    background-color: #a25d19;
+}
+
+.admin-category-list ul li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px 10px 15px;
+    margin-bottom: 1.5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.admin-category-list ul li span{
+    color: #444;
+}
+
+.admin-bt button{
+    background-color: tomato;
+    color: #fff;
+    border: 8px 16px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.admin-bt .admin-btn-edit{
+    background-color: #e0f2fe;
+}
+
+.admin-category-container {
+    background-color: var(--surface-color);
+    border: 1px solid var(--text-tertiary);
+    box-shadow: var(--shadow-md);
+}
+
+.admin-category-container h2 {
+    color: var(--text-primary);
+}
+
+.category-list {
+    border-top: 1px solid var(--text-tertiary);
+}
+
+.category-item {
+    border-bottom: 1px solid var(--text-tertiary);
+    background-color: var(--surface-color);
+}
+
+.category-item:hover {
+    background-color: var(--background-color);
+}
+
+.category-name {
+    color: var(--text-primary);
+}
+
+.category-actions button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+}
+
+.category-actions button:hover {
+    background-color: var(--button-hover-bg);
+    box-shadow: var(--shadow-sm);
+}
+
+.category-actions .delete-btn {
+    background-color: var(--error-color);
+}
+
+.category-actions .delete-btn:hover {
+    background-color: var(--error-hover-color);
+}
+
+.add-category-btn {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+}
+
+.add-category-btn:hover {
+    background-color: var(--button-hover-bg);
+    box-shadow: var(--shadow-sm);
+}
+
+.category-table th {
+    background-color: var(--surface-color);
+    color: var(--text-primary);
+}
+
+.category-table td {
+    color: var(--text-primary);
+}
+
+.category-table tr:hover {
+    background-color: var(--background-color);
+}
+
+.action-button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+}
+
+.action-button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+.delete-button {
+    background-color: var(--error-color);
+    color: var(--surface-color);
+}
+
+.delete-button:hover {
+    background-color: var(--error-hover-color);
+}
+
+.error-message {
+    background-color: var(--error-color);
+    color: var(--surface-color);
+}
+
+.success-message {
+    background-color: var(--success-color);
+    color: var(--surface-color);
+}

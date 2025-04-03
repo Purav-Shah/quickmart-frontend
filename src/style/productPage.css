@@ -1,0 +1,208 @@
+.product-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--background-color);
+    min-height: calc(100vh - 64px);
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    background-color: var(--surface-color);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--text-tertiary);
+}
+
+.product-image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-title {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.product-description {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.product-price {
+    font-size: 2rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.stock-info {
+    margin-bottom: 2rem;
+}
+
+.stock-status {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.in-stock {
+    background-color: var(--success-color);
+    color: var(--surface-color);
+}
+
+.low-stock {
+    background-color: var(--warning-color);
+    color: var(--surface-color);
+}
+
+.out-of-stock {
+    background-color: var(--error-color);
+    color: var(--surface-color);
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.quantity-label {
+    font-size: 1rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.quantity-input {
+    width: 60px;
+    padding: 0.5rem;
+    text-align: center;
+    border: 1px solid var(--text-tertiary);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--text-primary);
+    background-color: var(--surface-color);
+}
+
+.quantity-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(var(--primary-color), 0.1);
+}
+
+.quantity-button {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    font-size: 1.25rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.quantity-button:hover {
+    background-color: var(--button-hover-bg);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+.quantity-button:disabled {
+    background-color: var(--text-tertiary);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.add-to-cart {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: auto;
+}
+
+.add-to-cart:hover {
+    background-color: var(--button-hover-bg);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+.add-to-cart:disabled {
+    background-color: var(--text-tertiary);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.error-message {
+    background-color: var(--error-color);
+    color: var(--surface-color);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.success-message {
+    background-color: var(--success-color);
+    color: var(--surface-color);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .product-page {
+        padding: 1rem;
+    }
+
+    .product-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 1.5rem;
+    }
+
+    .product-title {
+        font-size: 2rem;
+    }
+
+    .product-price {
+        font-size: 1.75rem;
+    }
+
+    .quantity-controls {
+        justify-content: center;
+    }
+} 

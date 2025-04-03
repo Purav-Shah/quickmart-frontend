@@ -1,0 +1,228 @@
+.add-product-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--surface-color);
+  min-height: calc(100vh - 64px);
+  font-family: 'Inter', sans-serif;
+  border: 1px solid var(--text-tertiary);
+}
+
+.add-product-container h2 {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.product-form {
+  background-color: var(--surface-color);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid var(--text-tertiary);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--text-tertiary);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+  background-color: var(--surface-color);
+  font-family: 'Inter', sans-serif;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(var(--primary-color), 0.1);
+  background-color: white;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #94a3b8;
+  font-family: 'Inter', sans-serif;
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: flex-end;
+}
+
+.btn-cancel {
+  padding: 0.5rem 1rem;
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 120px;
+  font-family: 'Inter', sans-serif;
+}
+
+.btn-cancel:hover {
+  background-color: #fecaca;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-submit {
+  padding: 0.5rem 1rem;
+  background-color: #e0f2fe;
+  color: #075985;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 120px;
+  font-family: 'Inter', sans-serif;
+}
+
+.btn-submit:hover {
+  background-color: #bae6fd;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message {
+  background-color: #fef2f2;
+  color: #991b1b;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  border: 1px solid #fecaca;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message.success {
+  background-color: #dcfce7;
+  color: #166534;
+  border-color: #bbf7d0;
+}
+
+.image-preview {
+  margin-top: 0.5rem;
+  border: 2px dashed var(--text-tertiary);
+  border-radius: 8px;
+  padding: 0.5rem;
+  background-color: white;
+}
+
+.image-preview img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+.image-preview.active {
+  border-color: var(--primary-color);
+}
+
+.preview-text {
+  color: var(--text-secondary);
+}
+
+.submit-button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+}
+
+.submit-button:hover {
+  background-color: var(--button-hover-bg);
+  box-shadow: var(--shadow-sm);
+}
+
+.submit-button:disabled {
+  background-color: var(--text-tertiary);
+  color: var(--text-secondary);
+}
+
+.error-message {
+  background-color: var(--error-color);
+  color: var(--surface-color);
+}
+
+.success-message {
+  background-color: var(--success-color);
+  color: var(--surface-color);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .add-product-container {
+    padding: 1rem;
+  }
+
+  .add-product-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .product-form {
+    padding: 1.5rem;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .btn-submit,
+  .btn-cancel {
+    width: 100%;
+    text-align: center;
+  }
+}

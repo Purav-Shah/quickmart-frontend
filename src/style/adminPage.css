@@ -1,0 +1,128 @@
+.admin-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--background-color);
+    min-height: calc(100vh - 64px);
+}
+
+.admin-page h1 {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.admin-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 400px));
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.admin-page button {
+    background-color: var(--surface-color);
+    padding: 2rem;
+    font-size: 1.25rem;
+    border-radius: 12px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    color: var(--text-primary);
+    width: 100%;
+    box-shadow: var(--shadow-md);
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.admin-page button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    background-color: var(--button-bg);
+    color: var(--button-text);
+}
+
+@media (max-width: 768px) {
+    .admin-options {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .admin-page button {
+        padding: 1.5rem;
+        font-size: 1.125rem;
+    }
+
+    .admin-page h1 {
+        font-size: 2rem;
+    }
+}
+
+.admin-container {
+    background-color: var(--surface-color);
+    border: 1px solid var(--text-tertiary);
+    box-shadow: var(--shadow-md);
+}
+
+.admin-container h2 {
+    color: var(--text-primary);
+}
+
+.admin-section {
+    border-bottom: 1px solid var(--text-tertiary);
+}
+
+.admin-section:last-child {
+    border-bottom: none;
+}
+
+.admin-section h3 {
+    color: var(--text-primary);
+}
+
+.admin-section p {
+    color: var(--text-secondary);
+}
+
+.admin-link {
+    background-color: var(--surface-color);
+    border: 1px solid var(--text-tertiary);
+    color: var(--text-primary);
+}
+
+.admin-link:hover {
+    background-color: var(--background-color);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.admin-stats {
+    background-color: var(--surface-color);
+    border: 1px solid var(--text-tertiary);
+}
+
+.stat-card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--text-tertiary);
+    box-shadow: var(--shadow-sm);
+}
+
+.stat-label {
+    color: var(--text-secondary);
+}
+
+.stat-value {
+    color: var(--primary-color);
+}
+
+.error-message {
+    background-color: var(--error-color);
+    color: var(--surface-color);
+}

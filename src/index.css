@@ -1,0 +1,210 @@
+:root {
+  /* Light Theme Colors */
+  --primary-color: #075985;
+  --primary-hover: #0c4a6e;
+  --secondary-color: #64748b;
+  --accent-color: #2563eb;
+  --background-color: #f8f9fa;
+  --surface-color: #ffffff;
+  --text-primary: #2c3e50;
+  --text-secondary: #64748b;
+  --text-tertiary: #94a3b8;
+  --error-color: #991b1b;
+  --success-color: #166534;
+  
+  /* Button Colors */
+  --button-bg: #e0f2fe;
+  --button-text: #075985;
+  --button-hover-bg: #bae6fd;
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  
+  /* Border Radius */
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 0.75rem;
+  --border-radius-xl: 1rem;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+/* Dark Theme Colors */
+[data-theme="dark"] {
+  --primary-color: #60a5fa;
+  --primary-hover: #3b82f6;
+  --secondary-color: #94a3b8;
+  --accent-color: #60a5fa;
+  --background-color: #1a1a1a;
+  --surface-color: #2d2d2d;
+  --text-primary: #f3f4f6;
+  --text-secondary: #d1d5db;
+  --text-tertiary: #9ca3af;
+  --error-color: #ef4444;
+  --success-color: #22c55e;
+  
+  /* Button Colors */
+  --button-bg: #1e40af;
+  --button-text: #e0f2fe;
+  --button-hover-bg: #1e3a8a;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Modern Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  font-size: 0.875rem;
+}
+
+.btn-primary {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+}
+
+.btn-primary:hover {
+  background-color: var(--button-hover-bg);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Default button style for all buttons unless specifically overridden */
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--button-hover-bg);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Modern Input Styles */
+.input {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--border-radius-md);
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  background-color: var(--surface-color);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(7, 89, 133, 0.1);
+}
+
+/* Card Styles */
+.card {
+  background-color: var(--surface-color);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* List Styles */
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: var(--surface-color);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.list-item {
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+.list-item:hover {
+  background-color: #f8fafc;
+}
+
+/* Error Message */
+.error-message {
+  background-color: #fee2e2;
+  color: var(--error-color);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Success Message */
+.success-message {
+  background-color: #dcfce7;
+  color: var(--success-color);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+}

@@ -1,0 +1,74 @@
+.add-category-page{
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: var(--background-color);
+}
+.category-form{
+    display: flex;
+    flex-direction: column;
+}
+.category-form h2{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.category-form input{
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.category-form button{
+    background-color: #f68b1e;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 13px 20px;
+}
+.category-form button:hover{
+    background-color: #c4803c;
+}
+
+.add-category-container {
+    background-color: var(--surface-color);
+    border: 1px solid var(--text-tertiary);
+}
+
+.add-category-container h2 {
+    color: var(--text-primary);
+}
+
+.form-group label {
+    color: var(--text-primary);
+}
+
+.form-group input {
+    background-color: var(--surface-color);
+    border: 1px solid var(--text-tertiary);
+    color: var(--text-primary);
+}
+
+.form-group input:focus {
+    border-color: var(--primary-color);
+}
+
+.submit-button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+}
+
+.submit-button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+.submit-button:disabled {
+    background-color: var(--text-tertiary);
+    color: var(--text-secondary);
+}
+
+.error-message {
+    background-color: var(--error-color);
+    color: var(--surface-color);
+}

@@ -1,0 +1,437 @@
+.profile-page{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: calc(100vh - 100px); /* Account for header/footer */
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+}
+
+.profile-content {
+    flex: 1;
+}
+
+.profile-container {
+    background-color: var(--surface-color);
+    border: 1px solid var(--text-tertiary);
+}
+
+.profile-container h2 {
+    color: var(--text-primary);
+}
+
+.user-info {
+    background-color: var(--surface-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 30px;
+    border: 1px solid var(--text-tertiary);
+}
+
+.user-info h3 {
+    color: var(--text-primary);
+}
+
+.user-info p {
+    color: var(--text-secondary);
+}
+
+.profile-page h2{
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.profile-page h3{
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+}
+.profile-page p{
+    margin: 10px 0;
+    color: var(--text-primary);
+}
+.profile-page strong{
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: inherit;
+}
+.profile-page ul{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.profile-page li{
+    border: 1px solid var(--text-tertiary);
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--surface-color);
+}
+.profile-page li img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+.profile-page li div{
+    flex-grow: 1;
+}
+
+.profile-page li h4{
+    margin-bottom: 5px;
+    font-size: 1.3em;
+    color: var(--text-primary);
+}
+
+.profile-page li p{
+    margin-bottom: 5px;
+    color: var(--text-secondary);
+}
+
+.profile-button{
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: all 0.2s ease;
+} 
+
+.profile-button:hover{
+    background-color: var(--button-hover-bg);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+.error-message{
+    background-color: var(--error-color);
+    color: var(--surface-color);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+}
+
+/* Orders Section */
+.orders-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.order-item {
+    background-color: var(--surface-color);
+    border: 1px solid var(--text-tertiary);
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow-md);
+}
+
+.order-header {
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.order-header h4 {
+    margin: 0 0 10px 0;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.order-details {
+    margin-bottom: 20px;
+}
+
+.order-details p {
+    margin: 10px 0;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+
+.order-details strong {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.order-items {
+    margin-top: 10px;
+}
+
+.order-product {
+    margin-bottom: 15px;
+}
+
+.order-product:last-child {
+    margin-bottom: 0;
+}
+
+.order-product p {
+    margin: 8px 0;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+
+.order-product strong {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.order-status {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.order-status.pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.order-status.confirmed {
+    background-color: #cce5ff;
+    color: #004085;
+}
+
+.order-status.shipped {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.order-status.delivered {
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+.order-status.cancelled {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.order-status.returned {
+    background-color: #e2e3e5;
+    color: #383d41;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 8px 12px;
+    border: 1px solid var(--text-tertiary);
+    background-color: var(--surface-color);
+    cursor: pointer;
+    border-radius: 4px;
+    color: var(--text-primary);
+}
+
+.pagination button:hover {
+    background-color: var(--background-color);
+}
+
+.pagination button.active {
+    background-color: var(--primary-color);
+    color: var(--surface-color);
+    border-color: var(--primary-color);
+}
+
+.logout-section {
+    margin-top: 40px;
+    padding: 20px 0;
+    border-top: 1px solid var(--text-tertiary);
+    text-align: center;
+}
+
+.logout-button {
+    background-color: var(--surface-color);
+    color: var(--error-color);
+    padding: 12px 30px;
+    border: 2px solid var(--error-color);
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.logout-button:hover {
+    background-color: var(--error-color);
+    color: var(--surface-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Confirmation Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: var(--surface-color);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+}
+
+.modal-content h4 {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.modal-content p {
+    color: var(--text-secondary);
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.modal-button {
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.modal-button.confirm {
+    background-color: var(--error-color);
+    color: var(--surface-color);
+    border: none;
+}
+
+.modal-button.confirm:hover {
+    background-color: var(--error-hover-color);
+    transform: translateY(-1px);
+}
+
+.modal-button.cancel {
+    background-color: var(--surface-color);
+    color: var(--text-secondary);
+    border: 1px solid var(--text-tertiary);
+}
+
+.modal-button.cancel:hover {
+    background-color: var(--background-color);
+    transform: translateY(-1px);
+}
+
+.user-info p {
+    font-size: 1.1rem;
+    margin: 12px 0;
+}
+
+.profile-section {
+    background-color: var(--surface-color);
+    border: 1px solid var(--text-tertiary);
+}
+
+.profile-section h3 {
+    color: var(--text-primary);
+}
+
+.profile-section p {
+    color: var(--text-secondary);
+}
+
+.edit-button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+}
+
+.edit-button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+.save-button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+}
+
+.save-button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+.cancel-button {
+    background-color: var(--text-tertiary);
+    color: var(--text-secondary);
+}
+
+.cancel-button:hover {
+    background-color: var(--background-color);
+}
+
+.form-group label {
+    color: var(--text-primary);
+}
+
+.form-group input {
+    background-color: var(--surface-color);
+    border: 1px solid var(--text-tertiary);
+    color: var(--text-primary);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(var(--primary-color), 0.1);
+}
+
+.view-orders-btn {
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    max-width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.view-orders-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
