@@ -9,11 +9,17 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: var(--surface-color);
+    background-color: var(--gradient-main);
     box-shadow: var(--shadow-sm);
     border-bottom: 1px solid var(--text-tertiary);
 }
-
+.navHeader {
+    font-family: 'Righteous', cursive;
+    font-size: 30px;
+    color: #EB160F!important;
+    text-align: center;
+    margin: 2rem 0;
+}
 .navbar-brand img {
     height: 40px;
 }
