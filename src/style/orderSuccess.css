@@ -10,17 +10,39 @@
     text-align: center;
 }
 
+.order-success-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px);
+    padding: 2rem;
+    background-color: var(--background-color);
+}
+
+.order-success-content {
+    background-color: var(--surface-color);
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    padding: 3rem 2rem;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    border: 1px solid var(--text-tertiary);
+    margin-top: 2rem;
+}
+
 .success-icon {
     width: 80px;
     height: 80px;
-    background-color: var(--success-color);
+    background-color: rgba(5, 150, 105, 0.8); /* Lighter green */
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 2rem;
+    margin: 0 auto 2.5rem; /* More space below */
     color: var(--surface-color);
     font-size: 2.5rem;
+    margin-top: 1.5rem; /* Add space above */
 }
 
 .order-success-page h1 {
@@ -83,64 +105,76 @@
     font-weight: 600;
 }
 
-.action-buttons {
+.buttons-container {
+    width: 100%;
     display: flex;
-    gap: 1rem;
     justify-content: center;
+    align-items: center;
     margin-top: 2rem;
 }
 
-.action-button {
+.action-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+}
+
+/* Ensure both buttons use the same exact styling */
+.view-orders-btn, .continue-shopping-btn {
     padding: 0.75rem 1.5rem;
     border-radius: 8px;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s ease;
+    width: 180px; /* Force exact width */
+    text-align: center;
+    box-sizing: border-box;
+    display: inline-block;
 }
 
-.primary-button {
+.view-orders-btn {
     background-color: var(--button-bg);
     color: var(--button-text);
     border: none;
 }
 
-.primary-button:hover {
+.continue-shopping-btn {
+    background-color: var(--surface-color);
+    color: var(--text-primary);
+    border: 1px solid var(--text-tertiary);
+    margin: 0;
+    padding: 0.75rem 1.5rem;
+}
+
+.view-orders-btn:hover {
     background-color: var(--button-hover-bg);
     transform: translateY(-1px);
     box-shadow: var(--shadow-sm);
 }
 
-.secondary-button {
-    background-color: var(--surface-color);
-    color: var(--text-primary);
-    border: 1px solid var(--text-tertiary);
-}
-
-.secondary-button:hover {
+.continue-shopping-btn:hover {
     background-color: var(--background-color);
     transform: translateY(-1px);
     box-shadow: var(--shadow-sm);
 }
 
 @media (max-width: 768px) {
-    .order-success-page {
-        padding: 2rem 1rem;
+    .order-success-container {
+        padding: 1rem;
     }
 
-    .order-success-page h1 {
-        font-size: 2rem;
-    }
-
-    .order-details-card {
-        padding: 1.5rem;
+    .order-success-content {
+        padding: 2rem 1.5rem;
     }
 
     .action-buttons {
         flex-direction: column;
     }
 
-    .action-button {
+    .view-orders-btn, .continue-shopping-btn {
         width: 100%;
     }
 }
@@ -159,12 +193,7 @@
 }
 
 .continue-shopping-button {
-    background-color: var(--button-bg);
-    color: var(--button-text);
-}
-
-.continue-shopping-button:hover {
-    background-color: var(--button-hover-bg);
+    display: none !important; /* Hide this class completely */
 }
 
 .error-message {

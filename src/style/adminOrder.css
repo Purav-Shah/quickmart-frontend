@@ -39,7 +39,7 @@
 
 .order-header {
   padding: 1rem;
-  background-color: #f8f9fa;
+  background-color: var(--background-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -122,7 +122,7 @@
 }
 
 .order-items th {
-  background-color: #f8f9fa;
+  background-color: var(--background-color);
   font-weight: bold;
 }
 

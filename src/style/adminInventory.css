@@ -4,6 +4,9 @@
     padding: 2rem;
     background-color: var(--background-color);
     min-height: calc(100vh - 64px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .admin-inventory-page h2 {
@@ -12,14 +15,19 @@
     margin-bottom: 2rem;
     text-align: center;
     font-weight: 600;
+    width: 100%;
 }
 
 .inventory-table-container {
     background-color: var(--surface-color);
     border-radius: 12px;
     box-shadow: var(--shadow-md);
-    overflow: hidden;
+    overflow: auto;
     margin-bottom: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .inventory-table {
@@ -28,7 +36,6 @@
     border-spacing: 0;
     background-color: var(--surface-color);
     border-radius: 12px;
-    overflow: hidden;
     box-shadow: var(--shadow-md);
     margin-bottom: 2rem;
     border: 1px solid var(--text-tertiary);
@@ -37,7 +44,7 @@
 .inventory-table th,
 .inventory-table td {
     padding: 1rem;
-    text-align: left;
+    text-align: center;
     border-bottom: 1px solid var(--text-tertiary);
 }
 
@@ -47,6 +54,10 @@
     font-weight: 600;
     font-size: 0.875rem;
     text-transform: uppercase;
+}
+
+.inventory-table th:last-child {
+    text-align: center;
 }
 
 .inventory-table td {
@@ -130,7 +141,7 @@
     display: flex;
     gap: 0.5rem;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .stock-controls button {
@@ -178,13 +189,29 @@
     color: var(--success-color);
 }
 
+.inventory-table thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: var(--background-color);
+}
+
+.inventory-table td:last-child {
+    text-align: center;
+}
+
 @media (max-width: 768px) {
     .inventory-table-container {
         overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .inventory-table {
-        min-width: 600px;
+        min-width: 500px;
+        font-size: 0.9rem;
     }
 
     .admin-inventory-page {
@@ -192,12 +219,88 @@
     }
 
     .admin-inventory-page h2 {
-        font-size: 2rem;
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
     }
 
     .inventory-table th,
     .inventory-table td {
-        padding: 0.75rem;
+        padding: 0.75rem 0.5rem;
         font-size: 0.875rem;
+    }
+    
+    .inventory-actions {
+        gap: 0.5rem;
+        flex-wrap: nowrap;
+        min-width: 80px;
+    }
+    
+    .inventory-actions button {
+        width: 32px;
+        height: 32px;
+        font-size: 0.875rem;
+    }
+    
+    .stock-controls {
+        gap: 0.25rem;
+    }
+    
+    .stock-controls button {
+        width: 28px;
+        height: 28px;
+        font-size: 0.875rem;
+    }
+    
+    .inventory-table th:first-child,
+    .inventory-table td:first-child {
+        width: 15%;
+    }
+    
+    .inventory-table th:nth-child(2),
+    .inventory-table td:nth-child(2) {
+        width: 40%;
+    }
+    
+    .inventory-table th:nth-child(3),
+    .inventory-table td:nth-child(3) {
+        width: 20%;
+    }
+    
+    .inventory-table th:last-child,
+    .inventory-table td:last-child {
+        width: 25%;
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-inventory-page {
+        padding: 0.5rem;
+    }
+    
+    .admin-inventory-page h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .inventory-table {
+        min-width: 450px;
+    }
+    
+    .inventory-table th,
+    .inventory-table td {
+        padding: 0.5rem 0.25rem;
+        font-size: 0.75rem;
+    }
+    
+    .inventory-actions button {
+        width: 28px;
+        height: 28px;
+        font-size: 0.75rem;
+    }
+    
+    .stock-controls button {
+        width: 24px;
+        height: 24px;
+        font-size: 0.75rem;
     }
 } 

@@ -2,13 +2,13 @@
     max-width: 1400px;
     margin: 0 auto;
     padding: 2rem;
-    background-color: #f8f9fa;
+    background-color: var(--background-color);
     min-height: calc(100vh - 64px);
 }
 
 .home h2 {
     font-size: 2.5rem;
-    color: #2c3e50;
+    color: var(--text-primary);
     margin-bottom: 2rem;
     font-weight: 600;
 }
@@ -29,7 +29,7 @@
     align-items: center;
     min-height: calc(100vh - 64px);
     font-size: 1.25rem;
-    color: #4a5568;
+    color: var(--text-secondary);
     font-weight: 500;
 }
 

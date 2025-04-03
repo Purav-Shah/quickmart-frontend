@@ -7,7 +7,7 @@
 }
 
 .product-item {
-    background-color: white;
+    background-color: var(--background-color);
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border: 1px solid #e2e8f0;
@@ -35,7 +35,7 @@
     width: 100%;
     padding-top: 75%; /* 4:3 aspect ratio */
     position: relative;
-    background-color: white;
+    background-color: var(--background-color);
     border-bottom: 1px solid #e2e8f0;
 }
 
@@ -58,14 +58,14 @@
 
 .product-item h3 {
     font-size: 1rem;
-    color: #2c3e50;
+    color: var(--text-primary);
     margin: 0 0 0.5rem 0;
     font-weight: 600;
 }
 
 .product-item p {
     font-size: 0.875rem;
-    color: #4a5568;
+    color: var(--text-secondary);
     margin: 0 0 0.75rem 0;
     flex: 1;
 }
@@ -73,7 +73,7 @@
 .product-item span {
     display: block;
     font-size: 1.125rem;
-    color: #075985;
+    color: var(--primary-color);
     font-weight: 600;
     margin-top: auto;
 }
@@ -84,7 +84,7 @@
     justify-content: center;
     gap: 0.75rem;
     padding: 0.5rem;
-    background-color: #f8f9fa;
+    background-color: var(--background-color);
     border-top: 1px solid #e2e8f0;
 }
 
@@ -93,8 +93,8 @@
     height: 28px;
     border: none;
     border-radius: 50%;
-    background-color: #e0f2fe;
-    color: #075985;
+    background-color: var(--background-color);
+    color: var(--primary-color);
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
@@ -109,7 +109,7 @@
 
 .quantity-controls span {
     font-size: 1.125rem;
-    color: #2c3e50;
+    color: var(--text-primary);
     font-weight: 600;
     min-width: 2rem;
     text-align: center;
@@ -119,8 +119,8 @@
 .product-item > button {
     width: 100%;
     padding: 0.75rem;
-    background-color: #e0f2fe;
-    color: #075985;
+    background-color: var(--background-color);
+    color: var(--primary-color);
     border: none;
     font-size: 1rem;
     font-weight: 600;

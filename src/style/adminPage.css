@@ -28,7 +28,7 @@
     font-size: 1.25rem;
     border-radius: 12px;
     font-weight: 600;
-    border: none;
+    border: 1px solid transparent;
     cursor: pointer;
     color: var(--text-primary);
     width: 100%;
@@ -43,8 +43,9 @@
 .admin-page button:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
-    background-color: var(--button-bg);
-    color: var(--button-text);
+    border: 1px solid var(--primary-color);
+    background-color: var(--surface-color);
+    color: var(--text-primary);
 }
 
 @media (max-width: 768px) {

@@ -2,7 +2,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
-    background-color: #f8f9fa;
+    background-color: var(--background-color);
     min-height: auto;
     display: grid;
     grid-template-columns: 350px 1fr;
@@ -36,7 +36,7 @@
 
 .product-detail h1 {
     font-size: 2rem;
-    color: #2c3e50;
+    color: var(--text-primary);
     margin: 0;
     font-weight: 600;
     text-align: center;
@@ -44,7 +44,7 @@
 
 .product-detail p {
     font-size: 1rem;
-    color: #4a5568;
+    color: var(--text-secondary);
     margin: 0;
     line-height: 1.5;
     text-align: center;
@@ -52,7 +52,7 @@
 
 .product-detail span {
     font-size: 1.75rem;
-    color: #075985;
+    color: var(--primary-color);
     font-weight: 600;
     text-align: center;
 }
@@ -83,7 +83,7 @@
     border: none;
     border-radius: 50%;
     background-color: #e0f2fe;
-    color: #075985;
+    color: var(--primary-color);
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
@@ -102,7 +102,7 @@
 
 .quantity-controls span {
     font-size: 1.25rem;
-    color: #2c3e50;
+    color: var(--text-primary);
     font-weight: 600;
     min-width: 2.5rem;
     text-align: center;
@@ -112,7 +112,7 @@
 .product-detail button {
     padding: 0.75rem 1.5rem;
     background-color: #e0f2fe;
-    color: #075985;
+    color: var(--primary-color);
     border: none;
     border-radius: 20px;
     font-size: 1rem;

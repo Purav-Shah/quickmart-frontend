@@ -28,7 +28,7 @@
 .filter-section label {
     font-size: 1rem;
     font-weight: 600;
-    color: #2c3e50;
+    color: var(--text-primary);
 }
 
 .filter-section select {
@@ -36,7 +36,7 @@
     border: 1px solid #e2e8f0;
     border-radius: 6px;
     font-size: 1rem;
-    color: #4a5568;
+    color: var(--text-secondary);
     background-color: white;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -71,7 +71,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem;
-    background-color: #f8f9fa;
+    background-color: var(--background-color);
     border-bottom: 1px solid #e2e8f0;
 }
 
@@ -127,12 +127,12 @@
 
 .order-info p {
     margin: 0.5rem 0;
-    color: #4a5568;
+    color: var(--text-secondary);
     font-size: 1rem;
 }
 
 .order-info strong {
-    color: #2c3e50;
+    color: var(--text-primary);
     font-weight: 600;
 }
 
@@ -142,7 +142,7 @@
 
 .order-items h4 {
     font-size: 1.125rem;
-    color: #2c3e50;
+    color: var(--text-primary);
     margin-bottom: 1rem;
     font-weight: 600;
 }
@@ -151,7 +151,7 @@
     display: flex;
     gap: 1rem;
     padding: 1rem;
-    background-color: #f8f9fa;
+    background-color: var(--background-color);
     border-radius: 8px;
     margin-bottom: 1rem;
 }
@@ -173,12 +173,12 @@
 
 .item-details p {
     margin: 0.25rem 0;
-    color: #4a5568;
+    color: var(--text-secondary);
     font-size: 1rem;
 }
 
 .item-details strong {
-    color: #2c3e50;
+    color: var(--text-primary);
     font-weight: 600;
 }
 
@@ -193,7 +193,7 @@
 
 .no-orders p {
     font-size: 1.25rem;
-    color: #4a5568;
+    color: var(--text-secondary);
     margin-bottom: 1.5rem;
 }
 
@@ -267,13 +267,13 @@
 .pagination button {
     padding: 8px 12px;
     border: 1px solid #ddd;
-    background-color: white;
+    background-color: var(--background-color);
     cursor: pointer;
     border-radius: 4px;
 }
 
 .pagination button:hover {
-    background-color: #f0f0f0;
+    background-color: var(--background-color);
 }
 
 .pagination button.active {

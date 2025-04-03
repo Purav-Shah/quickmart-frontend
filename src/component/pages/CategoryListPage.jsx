@@ -27,24 +27,22 @@ const CategoryListPage = () => {
 
     return(
         <div className="category-list-container">
-            <div className="category-list">
-                {error ? (
-                    <p className="error-message">{error}</p>
-                ) : (
-                    <div className="categories-content">
-                        <h2>Categories</h2>
-                        <ul>
-                            {categories.map((category) => (
-                                <li key={category.id}>
-                                    <button onClick={() => handleCategoryClick(category.id)}>
-                                        {category.name}
-                                    </button>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                )}
-            </div>
+            {error ? (
+                <p className="error-message">{error}</p>
+            ) : (
+                <div className="categories-content">
+                    <h2>Categories</h2>
+                    <ul className="categories-grid">
+                        {categories.map((category) => (
+                            <li key={category.id}>
+                                <button onClick={() => handleCategoryClick(category.id)}>
+                                    {category.name}
+                                </button>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
         </div>
     )
 }

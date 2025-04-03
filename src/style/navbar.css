@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -8,17 +8,18 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: var(--gradient-main);
     padding: 1rem 2rem;
-    background-color: var(--gradient-main);
     box-shadow: var(--shadow-sm);
-    border-bottom: 1px solid var(--text-tertiary);
+    border-bottom: none;
+    flex-wrap: wrap;
 }
 .navHeader {
-    font-family: 'Righteous', cursive;
-    font-size: 30px;
+    font-family: 'Boldonse', cursive;
+    font-size: 24px;
     color: #EB160F!important;
     text-align: center;
-    margin: 2rem 0;
+    margin: 0;
 }
 .navbar-brand img {
     height: 40px;
@@ -37,7 +38,7 @@ body {
     padding: 0.75rem 1rem;
     padding-right: 120px;
     border: 1px solid var(--text-tertiary);
-    border-radius: 25px;
+    border-radius: 10px;
     font-size: 0.875rem;
     transition: all 0.2s ease;
     background-color: var(--surface-color);
@@ -59,11 +60,18 @@ body {
     background-color: var(--button-bg);
     color: var(--button-text);
     border: none;
-    border-radius: 20px;
+    border-radius: 8px;
     font-size: 0.875rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-search button svg {
+    font-size: 1rem;
 }
 
 .navbar-search button:hover {
@@ -82,21 +90,49 @@ body {
 .navbar-link a {
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.2s ease;
+    transition: all 0.2s ease;
+    color: var(--text-primary);
+    position: relative;
+    padding: 0.35rem 0;
 }
 
 .navbar-link a:hover {
     color: var(--primary-color);
+    transform: translateY(-1px);
+}
+
+.navbar-link a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+}
+
+.navbar-link a:hover::after,
+.navbar-link a.active::after {
+    width: 100%;
 }
 
 .navbar-link a.active {
-    color: var(--primary-color);
+    color: var(--text-primary);
     font-weight: 600;
 }
 
+[data-theme="dark"] .navbar-link a.active {
+    color: white;
+}
+
 .user-name {
-    color: var(--primary-color) !important;
+    color: var(--text-primary) !important;
     font-weight: 600 !important;
+}
+
+[data-theme="dark"] .user-name {
+    color: white !important;
 }
 
 .navbar-button {
@@ -137,4 +173,128 @@ body {
 
 .navbar-mobile-link.active {
     color: var(--primary-color);
+}
+
+.cart-icon {
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    transition: all 0.2s ease;
+}
+
+.cart-icon:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+[data-theme="dark"] .cart-icon {
+    color: white;
+}
+
+.hamburger-menu {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin-left: auto;
+    z-index: 100;
+}
+
+.hamburger-menu:hover {
+    color: var(--primary-color);
+    transform: none;
+    background: transparent;
+}
+
+/* Add responsive styles for mobile */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .navbar-brand {
+        display: flex;
+        justify-content: flex-start;
+        margin-right: auto;
+        order: 1;
+        flex-basis: auto;
+    }
+    
+    .hamburger-menu {
+        display: block;
+        order: 2;
+        flex-basis: auto;
+    }
+    
+    .navbar-search {
+        margin: 0.5rem 0;
+        max-width: 100%;
+        order: 3;
+        flex-basis: 100%;
+    }
+    
+    .navbar-link {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        width: 100%;
+        padding: 1rem 0.5rem;
+        order: 4;
+        flex-basis: 100%;
+    }
+    
+    .navbar-link.show {
+        display: flex;
+    }
+    
+    /* Left margin for navbar links in mobile view */
+    .navbar-link a {
+        margin-left: 1rem;
+        width: 100%;
+        text-align: left;
+    }
+    
+    /* Make sure ThemeToggle and other controls align properly */
+    .navbar-link > div,
+    .navbar-link > button {
+        margin-left: 1rem;
+        align-self: flex-start;
+    }
+    
+    /* Give more vertical space between items */
+    .navbar-link > *:not(:last-child) {
+        margin-bottom: 0.5rem;
+    }
+    
+    .navbar-search input {
+        padding-right: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.75rem;
+    }
+    
+    .navHeader {
+        font-size: 24px;
+    }
+    
+    .navbar-link {
+        gap: 0.75rem;
+    }
+    
+    .navbar-search button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .hamburger-menu {
+        font-size: 1.25rem;
+        padding: 0.4rem;
+    }
 }

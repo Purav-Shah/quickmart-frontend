@@ -327,12 +327,15 @@
 
 /* Update any branding-related styles */
 .brand-logo {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    color: var(--primary-color);
+    font-size: 2rem;
+    color: var(--text-primary);
 }
 
 .brand-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
     font-size: 1.5rem;
     color: var(--text-primary);
 }

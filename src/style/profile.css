@@ -136,9 +136,28 @@
     box-shadow: var(--shadow-md);
 }
 
-.order-header {
+.order-header, .profile-order-header {
     margin-bottom: 20px;
     color: var(--text-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--surface-color) !important;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--text-tertiary);
+}
+
+.profile-order-header {
+    background-color: var(--surface-color) !important;
+}
+
+.profile-order-header div {
+    background-color: var(--surface-color) !important;
+}
+
+.order-header div {
+    background-color: var(--surface-color);
 }
 
 .order-header h4 {
@@ -146,6 +165,7 @@
     color: var(--text-primary);
     font-size: 1.1rem;
     font-weight: 600;
+    background-color: var(--surface-color);
 }
 
 .order-details {

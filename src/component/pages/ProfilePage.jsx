@@ -109,7 +109,7 @@ const ProfilePage = () => {
                             <ul className="orders-list">
                                 {paginatedOrders.map(order => (
                                     <li key={order.id} className="order-item">
-                                        <div className="order-header">
+                                        <div className="order-header profile-order-header">
                                             <div>
                                                 <h4>Order #{order.id}</h4>
                                                 <span className={`order-status ${order.status.toLowerCase()}`}>
@@ -119,7 +119,7 @@ const ProfilePage = () => {
                                         </div>
                                         <div className="order-details">
                                             <p><strong>Date: </strong>{new Date(order.orderDate).toLocaleDateString()}</p>
-                                            <p><strong>Total Amount: </strong>${order.totalAmount.toFixed(2)}</p>
+                                            <p><strong>Total Amount: </strong>₹{order.totalAmount.toFixed(2)}</p>
                                             <p><strong>Shipping Address: </strong>{order.shippingAddress}</p>
                                         </div>
                                         <div className="order-items">
@@ -128,8 +128,8 @@ const ProfilePage = () => {
                                                     <div>
                                                         <p><strong>{item.productName}</strong></p>
                                                         <p>Quantity: {item.quantity}</p>
-                                                        <p>Price: ${item.price.toFixed(2)}</p>
-                                                        <p>Total: ${(item.price * item.quantity).toFixed(2)}</p>
+                                                        <p>Price: ₹{item.price.toFixed(2)}</p>
+                                                        <p>Total: ₹{(item.price * item.quantity).toFixed(2)}</p>
                                                     </div>
                                                 </div>
                                             ))}

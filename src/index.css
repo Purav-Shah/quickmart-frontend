@@ -1,7 +1,7 @@
 :root {
   /* Light Theme Colors */
-  --primary-color: #075985;
-  --primary-hover: #0c4a6e;
+  --primary-color: #ff6b6b;
+  --primary-hover: #ff5252;
   --secondary-color: #64748b;
   --accent-color: #2563eb;
   --background-color: #f8f9fa;
@@ -13,12 +13,12 @@
   --success-color: #166534;
 
   /* Gradients */
-  --gradient-main: linear-gradient(to bottom, #ffafaf, #ffffff);
-
+  --gradient-main: linear-gradient(to bottom, #ffafaf, var(--background-color));
+  --gradient-footer: linear-gradient(to top, #ffafaf, var(--background-color));
   /* Button Colors */
-  --button-bg: #e0f2fe;
-  --button-text: #075985;
-  --button-hover-bg: #bae6fd;
+  --button-bg: #ff6b6b;
+  --button-text: #ffffff;
+  --button-hover-bg: #ff5252;
 
   /* Spacing */
   --spacing-xs: 0.25rem;
@@ -42,8 +42,8 @@
 
 /* Dark Theme Colors */
 [data-theme="dark"] {
-  --primary-color: #60a5fa;
-  --primary-hover: #3b82f6;
+  --primary-color: #ff6b6b;
+  --primary-hover: #ff5252;
   --secondary-color: #94a3b8;
   --accent-color: #60a5fa;
   --background-color: #1a1a1a;
@@ -56,11 +56,12 @@
 
   /* Gradients */
   --gradient-main: linear-gradient(to bottom, #ffafaf, #1a1a1a);
+  --gradient-footer: linear-gradient(to top, #ffafaf, #1a1a1a);
 
   /* Button Colors */
-  --button-bg: #1e40af;
-  --button-text: #e0f2fe;
-  --button-hover-bg: #1e3a8a;
+  --button-bg: #ff6b6b;
+  --button-text: #ffffff;
+  --button-hover-bg: #ff5252;
 
   /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
@@ -72,12 +73,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background-color);
@@ -89,7 +88,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
+.navbar-bg {
+  background-color: var(--gradient-main);
+}
 /* Modern Button Styles */
 .btn {
   display: inline-flex;

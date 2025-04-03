@@ -125,7 +125,7 @@ const OrdersPage = () => {
                                 
                                 <div className="order-info">
                                     <p><strong>Order Date:</strong> {new Date(order.orderDate).toLocaleDateString()}</p>
-                                    <p><strong>Total Amount:</strong> ${order.totalAmount.toFixed(2)}</p>
+                                    <p><strong>Total Amount:</strong> ₹{order.totalAmount.toFixed(2)}</p>
                                     <p><strong>Shipping Address:</strong> {order.shippingAddress}</p>
                                 </div>
 
@@ -142,8 +142,8 @@ const OrdersPage = () => {
                                                 <div className="item-details">
                                                     <p><strong>{item.productName}</strong></p>
                                                     <p>Quantity: {item.quantity}</p>
-                                                    <p>Price: ${item.price.toFixed(2)}</p>
-                                                    <p>Total: ${(item.price * item.quantity).toFixed(2)}</p>
+                                                    <p>Price: ₹{item.price.toFixed(2)}</p>
+                                                    <p>Total: ₹{(item.price * item.quantity).toFixed(2)}</p>
                                                 </div>
                                             </div>
                                         );

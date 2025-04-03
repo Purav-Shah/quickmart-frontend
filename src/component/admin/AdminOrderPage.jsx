@@ -28,26 +28,26 @@ const AdminOrdersPage = () => {
 
     useEffect(() => {
         fetchOrders();
-    }, [searchStatus, currentPage]);
+    }, [currentPage, statusFilter]);
 
 
 
     const fetchOrders = async () => {
         try {
-            let response;
-            if(searchStatus){
-                response = await ApiService.getAllOrderItemsByStatus(searchStatus);
-                const orderList = response.orderItemList || [];
-                setTotalPages(Math.ceil(orderList.length/itemsPerPage));
-                setOrders(orderList);
-                setFilteredOrders(orderList.slice((currentPage -1) * itemsPerPage, currentPage * itemsPerPage));
+            const response = await ApiService.getAllOrders();
+            const orderList = response || [];
+            setTotalPages(Math.ceil(orderList.length/itemsPerPage));
+            setOrders(orderList);
+            
+            // Apply filter if one is set
+            if (statusFilter && statusFilter !== 'ALL') {
+                const filtered = orderList.filter(order => order.status === statusFilter);
+                setFilteredOrders(filtered.slice((currentPage -1) * itemsPerPage, currentPage * itemsPerPage));
+                setTotalPages(Math.ceil(filtered.length / itemsPerPage));
             } else {
-                response = await ApiService.getAllOrders();
-                const orderList = response || [];
-                setTotalPages(Math.ceil(orderList.length/itemsPerPage));
-                setOrders(orderList);
                 setFilteredOrders(orderList.slice((currentPage -1) * itemsPerPage, currentPage * itemsPerPage));
             }
+            
             setLoading(false);
         } catch (error) {
             setError(error.response?.data?.message || error.message || 'unable to fetch orders')
@@ -63,11 +63,11 @@ const AdminOrdersPage = () => {
         setStatusFilter(filterValue)
         setCurrentPage(1);
 
-        if (filterValue) {
+        if (filterValue && filterValue !== 'ALL') {
             const filtered = orders.filter(order => order.status === filterValue);
             setFilteredOrders(filtered.slice(0, itemsPerPage));
             setTotalPages(Math.ceil(filtered.length / itemsPerPage));
-        }else{
+        } else {
             setFilteredOrders(orders.slice(0, itemsPerPage));
             setTotalPages(Math.ceil(orders.length / itemsPerPage));
         }
@@ -112,23 +112,13 @@ const AdminOrdersPage = () => {
             {error && <p className="error-message">{error}</p>}
             <div className="filter-container">
                 <div className="statusFilter">
-                    <label >Filter By Status</label>
+                    <label >Order By Status</label>
                     <select value={statusFilter} onChange={handleFilterChange}>
                         <option value="ALL">All</option>
                         {OrderStatus.map(status=>(
                             <option key={status} value={status}>{status}</option>
                         ))}
                     </select>
-                </div>
-                <div className="searchStatus">
-                <label>Search By Status</label>
-                    <select value={searchStatus} onChange={handleSearchStatusChange}>
-                        <option value="">All</option>
-                        {OrderStatus.map(status=>(
-                            <option key={status} value={status}>{status}</option>
-                        ))}
-                    </select>
-
                 </div>
             </div>
 

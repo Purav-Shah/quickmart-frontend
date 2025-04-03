@@ -1,6 +1,8 @@
 .home-page {
     min-height: 100vh;
     background-color: var(--background-color);
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .carousel-wrapper {
@@ -12,11 +14,12 @@
     margin: 0 auto;
     padding: 0 2rem;
     width: 100%;
+    
 }
 
 .featured-section {
     margin-bottom: 4rem;
-    background-color: var(--surface-color);
+    background-color: var(--background-color);
 }
 
 .section-title {
@@ -177,8 +180,13 @@
         font-size: 2rem;
     }
 
+    .section-description {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
     .featured-products {
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 1.5rem;
     }
 
@@ -193,5 +201,42 @@
 
     .category-icon {
         font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .section-description {
+        font-size: 0.9rem;
+    }
+
+    .featured-products {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+
+    .featured-section {
+        margin-bottom: 2rem;
+    }
+
+    .loading, .error, .no-results {
+        padding: 2rem;
+        font-size: 1rem;
+    }
+
+    .category-card {
+        padding: 1rem;
+    }
+
+    .category-icon {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .category-card h3 {
+        font-size: 1rem;
     }
 } 

@@ -24,13 +24,15 @@ const OrderSuccessPage = () => {
                 <div className="order-details">
                     <p>Order Number: <span className="order-number">{orderNumber}</span></p>
                 </div>
-                <div className="action-buttons">
-                    <button className="view-orders-btn" onClick={handleViewOrders}>
-                        View Orders
-                    </button>
-                    <button className="continue-shopping-btn" onClick={handleContinueShopping}>
-                        Continue Shopping
-                    </button>
+                <div className="buttons-container">
+                    <div className="action-buttons">
+                        <button className="view-orders-btn" onClick={handleViewOrders}>
+                            View Orders
+                        </button>
+                        <button className="continue-shopping-btn" onClick={handleContinueShopping}>
+                            Continue Shopping
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

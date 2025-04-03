@@ -54,34 +54,36 @@ const AdminInventoryPage = () => {
             {message && <div className="success-message">{message}</div>}
             {error && <div className="error-message">{error}</div>}
             
-            <table className="inventory-table">
-                <thead>
-                    <tr>
-                        <th>Product ID</th>
-                        <th>Product Name</th>
-                        <th>Current Stock</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {inventory.map((item, index) => (
-                        <tr key={item.productId}>
-                            <td>{item.productId}</td>
-                            <td>{products.find(p => p.id === item.productId)?.name}</td>
-                            <td>{item.quantity}</td>
-                            <td className="inventory-actions">
-                                <button 
-                                    onClick={() => handleQuantityChange(item.productId, -1)}
-                                    disabled={item.quantity <= 0}
-                                >-</button>
-                                <button 
-                                    onClick={() => handleQuantityChange(item.productId, 1)}
-                                >+</button>
-                            </td>
+            <div className="inventory-table-container">
+                <table className="inventory-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Product</th>
+                            <th>Stock</th>
+                            <th>Actions</th>
                         </tr>
-                    ))}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        {inventory.map((item, index) => (
+                            <tr key={item.productId}>
+                                <td>{item.productId}</td>
+                                <td>{products.find(p => p.id === item.productId)?.name}</td>
+                                <td>{item.quantity}</td>
+                                <td className="inventory-actions">
+                                    <button 
+                                        onClick={() => handleQuantityChange(item.productId, -1)}
+                                        disabled={item.quantity <= 0}
+                                    >-</button>
+                                    <button 
+                                        onClick={() => handleQuantityChange(item.productId, 1)}
+                                    >+</button>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
 
             <Pagination
                 currentPage={currentPage}
