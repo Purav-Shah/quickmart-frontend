@@ -26,9 +26,9 @@ const Navbar = () =>{
     const showSearch = location.pathname !== '/cart';
 
     return(
-        <nav className="navbar">
+        <nav className="navbar navbar-bg">
             <div className="navbar-brand">
-                <NavLink to="/" > <img src="./quick_mart.png" alt="Quick Mart" /></NavLink>
+                <NavLink to="/" className="text-reset"> <h1 className="navHeader">Quickmart</h1></NavLink>
             </div>
             {/* SEARCH FORM */}
             {showSearch && (
